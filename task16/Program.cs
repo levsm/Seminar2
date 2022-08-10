@@ -6,17 +6,25 @@
 //25, 5 -> да
 //8,9 -> нет
 
-Console.WriteLine("Введите число a: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число b: ");
-int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число 1");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число 2");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int numbers1 = Quadro(num1);
+int numbers2 = Quadro(num2);
 
-if (a * a == b)
+if (numbers1 == num2 || numbers2 == num1)
 {
-    Console.WriteLine("Да, первое число является квадратом второго числа");
+Console.Write("Да, является одно число квадратом другого числа");
+}
+else 
+{
+  Console.Write("Нет, не является одно число квадратом другого числа");  
 }
 
-else
+int Quadro (int a)
 {
-    Console.WriteLine("Нет не является первое число квадратом второго");
+    return a * a;
 }
+
+
